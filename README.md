@@ -8,7 +8,9 @@ Right now it scrapes bugs.chromium.com for issues, however it can (and  eventual
 
 A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
 
-## Basic Usage
+## Usage
+
+### Basic Usage
 
 I tried to make sure there weren't any dependencies so this could just be dropped in and used. The query builder function below accepts many different arguments corresponding to the advanced search feature located [here](https://bugs.chromium.org/p/chromium/issues/advsearch). All arguments are expected as space delimited.
 
@@ -24,7 +26,7 @@ output = scrape.search(query)
 print(json.dumps(output))
 ```
 
-## Getting Issues, Comments and Attachments
+### Getting Issues, Comments and Attachments
 
 The get_all() function will go a step further and return all issues with their relevant comments and attachments. This is especially useful for getting PoC's before they are triaged and hidden.
 
