@@ -6,7 +6,7 @@ Right now it scrapes bugs.chromium.com for issues, however it can (and  eventual
 
 ## Interesting Tidbits
 
-A few main things to note here are the X-XSRF token (which you absolutely need to get your reponses back) and that the response comes back as malformed JSON [Apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
+A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
 
 ## Basic Usage
 
@@ -59,6 +59,18 @@ output = scrape.search(query)
 print(json.dumps(output))
 ```
 
-## License
+## META
+
+### TODOS
+
+1) Make the get_all() asynchronous. As is, it was tacked on in a hurry to get some use out of it  
+2) Prebuild a few more queries for people who don't want to investigate search functionality  
+3) Generalize for all monorail sites, not just chromium  
+
+### Contributions
+
+Got a neat use case? Love to hear it :) Also feel free to contribute. I will try to be timely on issues / pull requests, but will obviously not turn down good help.
+
+### License
 
 Project is MIT Licensed. I'm NOT responsible for what you do with this. DBAD.
