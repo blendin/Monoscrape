@@ -6,7 +6,7 @@ Right now it scrapes bugs.chromium.com for issues, however it can (and  eventual
 
 ## Interesting Tidbits
 
-A few main things to note here are the X-XSRF token and that the response comes back as malformed JSON, site is running on Monorail
+A few main things to note here are the X-XSRF token (which you absolutely need to get your reponses back) and that the response comes back as malformed JSON [Apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
 
 ## Basic Usage
 
