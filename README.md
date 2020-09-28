@@ -14,14 +14,14 @@ I tried to make sure there weren't any dependencies so this could just be droppe
 
 ```python
 from scraper import Scraper
+import json
 
 scrape = Scraper()
 
-query = scrape.query_builder(with_string="v8", num_items=1000)
+query = scrape.query_builder(num_items=1000, with_strings="v8")
+output = scrape.search(query)
 
-json_results = scrape.search(query)
-
-print(json_results)
+print(json.dumps(output))
 ```
 
 ## Getting Issues, Comments and Attachments
@@ -30,15 +30,15 @@ The get_all() function will go a step further and return all issues with their r
 
 ```python
 from scraper import Scraper
+import json
 
 scrape = Scraper()
 
 # grabs any issues with id > 1132000
-query = scrape.query_builder(with_string="id>1132000", num_items=100000)
+query = scrape.query_builder(num_items=1000000, with_strings="id>1132000")
+output = scrape.get_all(query)
 
-json_results = scrape.get_all(query)
-
-print(json_results)
+print(json.dumps(output))
 ```
 
 ## Advanced Usage
@@ -49,13 +49,16 @@ More advanced tips and tricks on using the search can be found [here](https://bu
 
 ```python
 from scraper import Scraper
+import json
 
 scrape = Scraper()
 
 query = scrape.raw_query('"out of memory" summary:v8')
+output = scrape.search(query)
 
-json_results = scrape.search(query)
-
-print(json_results)
+print(json.dumps(output))
 ```
 
+## License
+
+Project is MIT Licensed. I'm NOT responsible for what you do with this. DBAD.
