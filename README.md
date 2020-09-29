@@ -2,11 +2,11 @@
 
 ## What this is
 
-Right now it scrapes bugs.chromium.com for issues, however it can (and  eventually will be) adapted to a general purpose monorail scraper. This was a project I was working on but quickly uploaded due to a permissions bug in monorail. I even tossed up a blog post [here](http://juergens.io/blog/?id=23) if you're interested. (please god read it, the internet is a lonely place for an unloved blog, and I crave validation)
+Right now it scrapes bugs.chromium.com for issues, however it can (and  eventually will be) adapted to a general purpose monorail scraper.
 
 ## Interesting Tidbits
 
-A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON so I had to just skip a few characters, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
+A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON so I had to just skip a few characters, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail) if you're interested in looking at it.
 
 ## Usage
 
@@ -68,6 +68,7 @@ print(json.dumps(output))
 1) Make the get_all() asynchronous. As is, it was tacked on in a hurry to get some use out of it  
 2) Prebuild a few more queries for people who don't want to investigate search functionality  
 3) Generalize for all monorail sites, not just chromium  
+4) Read more monorail source and try to play nicely with their rate limiting and restrictions  
 
 ### Contributions
 
@@ -75,4 +76,4 @@ Got a neat use case? Love to hear it :) Also feel free to contribute. I will try
 
 ### License
 
-Project is MIT Licensed. I'm NOT responsible for what you do with this. DBAD.
+Project is MIT Licensed. I'm NOT responsible for what you do with this. I'm also NOT responsible for any lists you wind up on, [see here](https://chromium.googlesource.com/infra/infra/+/b83fc0c435a27eef10b5dd880a97af3e0c870201). DBAD. 
