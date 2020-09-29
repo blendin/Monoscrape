@@ -2,11 +2,11 @@
 
 ## What this is
 
-Right now it scrapes bugs.chromium.com for issues, however it can (and  eventually will be) adapted to a general purpose monorail scraper. This was a project I was working on but quickly uploaded due to the permissions bug in monorail.
+Right now it scrapes bugs.chromium.com for issues, however it can (and  eventually will be) adapted to a general purpose monorail scraper. This was a project I was working on but quickly uploaded due to a permissions bug in monorail. I even tossed up a blog post [here](http://juergens.io/blog/?id=23) if you're interested. (please god read it, the internet is a lonely place for an unloved blog, and I crave validation)
 
 ## Interesting Tidbits
 
-A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
+A few main things to note here are the X-XSRF token (which you absolutely need to get your responses back). Also the response comes back as malformed JSON so I had to just skip a few characters, [apparently to prevent some nefariousness](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail/static/js/framework/framework-ajax.js). Speaking of which, all monorail source code is located [here](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail)
 
 ## Usage
 
