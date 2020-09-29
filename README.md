@@ -76,4 +76,4 @@ Got a neat use case? Love to hear it :) Also feel free to contribute. I will try
 
 ### License
 
-Project is MIT Licensed. I'm NOT responsible for what you do with this. I'm also NOT responsible for any lists you wind up on, [see here](https://chromium.googlesource.com/infra/infra/+/b83fc0c435a27eef10b5dd880a97af3e0c870201). DBAD. 
+Project is MIT Licensed. I'm NOT responsible for what you do with this. I'm also NOT responsible for any lists you wind up on, [see here](https://chromium.googlesource.com/infra/infra/+/b83fc0c435a27eef10b5dd880a97af3e0c870201/appengine/monorail/dos.yaml). DBAD. 
